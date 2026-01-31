@@ -11,14 +11,22 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Configure CORS
+# Configure CORS - dynamically build allowed origins
+allowed_origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:3001",
+]
+
+# Add production frontend URLs from environment
+if settings.frontend_url:
+    # Support comma-separated list of URLs
+    frontend_urls = [url.strip() for url in settings.frontend_url.split(",")]
+    allowed_origins.extend(frontend_urls)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "http://localhost:3001",
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

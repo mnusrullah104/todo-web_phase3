@@ -68,8 +68,7 @@ docker-compose up
 
 2. Run the backend:
 ```bash
-cd backend
-uvicorn src.main:app --reload --port 8001
+\
 
 ```
 

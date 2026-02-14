@@ -21,23 +21,22 @@ Click on **"Repository secrets"** and add these 3 variables:
 
 ### 1. DATABASE_URL
 ```
-postgresql://neondb_owner:npg_hrqynGo9ZWJ5@ep-polished-water-ai6shq6e-pooler.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+postgresql://neondb_owner:npg_hrqynGo9ZWJ5@ep-polished-water-ai6shq6e-pooler.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require
 ```
 **Purpose**: PostgreSQL database connection string (Neon Serverless)
+**Important**: Remove any `psql` prefix and `channel_binding=require` parameter
 
 ### 2. JWT_SECRET
 ```
-generate-a-secure-random-key-min-32-characters
+8ZM]fwws%d<q8LCXlpl7djbkA)Oss&AH
 ```
 **Purpose**: Secret key for JWT token signing and verification
-**Note**: Replace with a strong random string (minimum 32 characters)
 
 ### 3. COHERE_API_KEY
 ```
-your-cohere-api-key-here
+qXoZZDbJMKTd832LJY8XULmT14mHABaMCGMIjILh
 ```
 **Purpose**: Cohere AI API key for chatbot functionality
-**Get it from**: https://dashboard.cohere.com/api-keys
 
 ---
 

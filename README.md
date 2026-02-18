@@ -65,8 +65,7 @@ phase3_chatboat/
 │   │   ├── agent/             # AI agent (Cohere integration)
 │   │   └── main.py            # FastAPI app entry
 │   ├── tests/                 # Backend tests
-│   ├── requirements.txt
-│   └── README.md
+│   └── pyproject.toml         # Python dependencies
 │
 ├── frontend/                   # Next.js Frontend
 │   ├── src/
@@ -80,28 +79,46 @@ phase3_chatboat/
 │   │   ├── lib/               # API client and utilities
 │   │   └── styles/            # Global styles
 │   ├── public/                # Static assets
-│   ├── package.json
-│   └── README.md
+│   └── package.json           # Node dependencies
 │
-├── docs/                       # Documentation
-│   ├── deployment/            # Deployment guides
+├── docs/                       # Organized Documentation
+│   ├── deployment/            # Deployment guides (HuggingFace, Vercel)
+│   ├── development/           # Development guides (database, setup)
+│   ├── architecture/          # Architecture documentation
 │   ├── phase3/                # Phase III documentation
 │   ├── summaries/             # Implementation summaries
-│   ├── examples/              # Example files
-│   ├── QUICKSTART.md
-│   ├── STARTUP_GUIDE.md
-│   └── TESTING_GUIDE.md
+│   └── examples/              # Example files
 │
-├── scripts/                    # Utility scripts
-│   ├── start-all.bat          # Start both servers (Windows)
-│   ├── start.sh               # Start script (Unix)
-│   └── deploy_*.sh            # Deployment scripts
+├── specs/                      # Feature Specifications (SDD)
+│   ├── 001-ai-k12-efficiency/
+│   ├── 002-todo-web-app/
+│   └── 003-ai-chatbot-integration/
 │
-├── specs/                      # Feature specifications
-├── history/                    # Prompt history records
+├── history/                    # Development History
+│   └── prompts/               # Prompt History Records (PHRs)
+│
+├── skills/                     # Claude Code Custom Skills
+│   ├── ai_mcp_integrator/
+│   ├── python_specialist/
+│   └── frontend_architect/
+│
+├── scripts/                    # Utility Scripts
+│   ├── setup/
+│   ├── deployment/
+│   └── maintenance/
+│
+├── .specify/                   # SpecKit Plus Framework
+│   ├── memory/
+│   ├── templates/
+│   └── scripts/
+│
+├── STRUCTURE.md               # Detailed structure documentation
+├── PROJECT_STRUCTURE.txt      # Visual structure reference
+├── README.md                  # This file
+├── CLAUDE.md                  # Claude Code instructions
 ├── .env.example               # Environment variables template
 ├── docker-compose.yml         # Docker configuration
-└── README.md                  # This file
+└── vercel.json                # Vercel deployment config
 ```
 
 ## 🚀 Quick Start
@@ -255,8 +272,10 @@ npm run dev
 ### Deployment Guides
 
 See detailed deployment guides in `docs/deployment/`:
-- [Vercel Deployment Guide](docs/deployment/README_VERCEL_DEPLOYMENT.md)
-- [Hugging Face Deployment](docs/deployment/README_HF_DEPLOYMENT.md)
+- [HuggingFace Setup Guide](docs/deployment/HUGGINGFACE_ENV_SETUP.md)
+- [New Space Setup Guide](docs/deployment/NEW_SPACE_SETUP_GUIDE.md)
+- [Deployment Environment Guide](docs/deployment/DEPLOYMENT_ENV_GUIDE.md)
+- [Deployment Complete Summary](docs/deployment/DEPLOYMENT_COMPLETE.md)
 
 ### Quick Deploy
 
@@ -275,11 +294,20 @@ docker run -p 8001:8001 taskflow-backend
 
 ## 📖 Documentation
 
-- [Quick Start Guide](docs/QUICKSTART.md)
-- [Startup Guide](docs/STARTUP_GUIDE.md)
-- [Testing Guide](docs/TESTING_GUIDE.md)
-- [Phase III Implementation](docs/phase3/README_PHASE3.md)
-- [Project Reorganization Plan](docs/PROJECT_REORGANIZATION_PLAN.md)
+### Structure & Setup
+- [Project Structure](STRUCTURE.md) - Detailed directory structure guide
+- [Visual Structure Reference](PROJECT_STRUCTURE.txt) - ASCII structure overview
+
+### Development
+- [Database Fix Guide](docs/development/DATABASE_FIX_GUIDE.md)
+
+### Deployment
+- [HuggingFace Setup](docs/deployment/HUGGINGFACE_ENV_SETUP.md)
+- [Deployment Guide](docs/deployment/DEPLOYMENT_ENV_GUIDE.md)
+- [New Space Setup](docs/deployment/NEW_SPACE_SETUP_GUIDE.md)
+
+### Phase III
+- Phase III documentation in `docs/phase3/`
 
 ## 🔒 Security
 
